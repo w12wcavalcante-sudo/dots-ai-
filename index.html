@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="DOTS AI — o teu espaço pessoal para tarefas e notas.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>DOTS AI</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img src="icon.svg" alt="" width="40" height="40"><div><h1>DOTS AI</h1><p>O teu espaço. As tuas ideias.</p></div></div>
+    <span class="status"><span class="dot"></span> Guardado neste dispositivo</span>
+  </header>
+  <main class="container">
+    <section class="hero"><p class="eyebrow">BEM-VINDO AO TEU ESPAÇO</p><h2>Organiza o que<br><span>importa.</span></h2><p>Regista tarefas, guarda ideias e mantém tudo num só lugar.</p></section>
+    <section class="panel">
+      <div class="section-heading"><div><p class="eyebrow">HOJE</p><h2>As minhas tarefas</h2></div><span id="taskCount" class="count">0 tarefas</span></div>
+      <form id="taskForm" class="entry-form"><input id="taskInput" type="text" placeholder="O que precisas de fazer?" maxlength="180" required><button type="submit">Adicionar</button></form>
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+      <p id="emptyTasks" class="empty">Ainda não tens tarefas. Adiciona a primeira acima.</p>
+    </section>
+    <section class="panel">
+      <div class="section-heading"><div><p class="eyebrow">CAPTURA RÁPIDA</p><h2>As minhas notas</h2></div></div>
+      <form id="noteForm" class="entry-form note-form"><textarea id="noteInput" placeholder="Escreve uma ideia, lembrete ou plano..." rows="3" maxlength="2000" required></textarea><button type="submit">Guardar nota</button></form>
+      <div id="noteList" class="note-list"></div>
+      <p id="emptyNotes" class="empty">As tuas notas vão aparecer aqui.</p>
+    </section>
+    <section class="panel tools"><div><p class="eyebrow">OS TEUS DADOS</p><h2>Leva-os contigo</h2><p>Exporta uma cópia das tarefas e notas para guardares em segurança.</p></div><button id="exportBtn" class="secondary">Exportar dados (.json)</button></section>
+    <p class="footnote">Esta versão guarda os dados neste navegador. A ligação a uma IA real e a sincronização entre dispositivos ainda não estão ativadas.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
